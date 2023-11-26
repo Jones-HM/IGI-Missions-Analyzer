@@ -1,0 +1,1197 @@
+{
+    "1504": {
+        "commands": [
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Plays predefined animation 240",
+                "action": "0",
+                "param": "240"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "1504",
+                "model_id": "000_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "1504",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Cutscene Area"
+        },
+        "ai_id": "1506"
+    },
+    "2020": {
+        "commands": [
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Plays predefined animation 243",
+                "action": "0",
+                "param": "243"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2020",
+                "model_id": "000_01_1"
+            },
+            {
+                "soldier_id": "2020",
+                "model_id": "000_01_1"
+            },
+            {
+                "soldier_id": "2020",
+                "model_id": "000_01_1"
+            },
+            {
+                "soldier_id": "2020",
+                "model_id": "015_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2020",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Anya HQ Area"
+        },
+        "ai_id": "2022"
+    },
+    "3030": {
+        "commands": [
+            {
+                "note": "Delays the script execution for 1700 ticks",
+                "action": "1",
+                "param": "1700"
+            },
+            {
+                "note": "Walks to node id 4",
+                "action": "2",
+                "param": "4"
+            },
+            {
+                "note": "Walks to node id 3",
+                "action": "2",
+                "param": "3"
+            },
+            {
+                "note": "Walks to node id 2",
+                "action": "2",
+                "param": "2"
+            },
+            {
+                "note": "Walks to node id 1",
+                "action": "2",
+                "param": "1"
+            },
+            {
+                "note": "Walks to node id 3",
+                "action": "2",
+                "param": "3"
+            },
+            {
+                "note": "Walks to node id 2",
+                "action": "2",
+                "param": "2"
+            },
+            {
+                "note": "Walks to node id 1",
+                "action": "2",
+                "param": "1"
+            },
+            {
+                "note": "Walks to node id 2",
+                "action": "2",
+                "param": "2"
+            },
+            {
+                "note": "Walks to node id 3",
+                "action": "2",
+                "param": "3"
+            },
+            {
+                "note": "Walks to node id 4",
+                "action": "2",
+                "param": "4"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "3030",
+                "model_id": "003_01_1"
+            },
+            {
+                "soldier_id": "3030",
+                "model_id": "003_01_1"
+            },
+            {
+                "soldier_id": "3030",
+                "model_id": "000_01_1"
+            },
+            {
+                "soldier_id": "3030",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "3030",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "3091"
+    },
+    "2417": {
+        "commands": [
+            {
+                "note": "Walks to node id 63",
+                "action": "2",
+                "param": "63"
+            },
+            {
+                "note": "Looks at node id 64",
+                "action": "5",
+                "param": "64"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2417",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2417",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2217"
+    },
+    "2402": {
+        "commands": [
+            {
+                "note": "Walks to node id 9",
+                "action": "2",
+                "param": "9"
+            },
+            {
+                "note": "Looks at node id 34",
+                "action": "5",
+                "param": "34"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2402",
+                "model_id": "001_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2402",
+            "ai_type": "AITYPE_SNIPER",
+            "graph_area": "WaterTower"
+        },
+        "ai_id": "2202"
+    },
+    "2400": {
+        "commands": [
+            {
+                "note": "Walks to node id 3",
+                "action": "2",
+                "param": "3"
+            },
+            {
+                "note": "Looks at node id 11",
+                "action": "5",
+                "param": "11"
+            },
+            {
+                "note": "Delays the script execution for 400 ticks",
+                "action": "1",
+                "param": "400"
+            },
+            {
+                "note": "Looks at node id 9",
+                "action": "5",
+                "param": "9"
+            },
+            {
+                "note": "Delays the script execution for 400 ticks",
+                "action": "1",
+                "param": "400"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2200"
+    },
+    "2600": {
+        "commands": [
+            {
+                "note": "Runs to node id 2",
+                "action": "3",
+                "param": "2"
+            },
+            {
+                "note": "Looks at node id 10",
+                "action": "5",
+                "param": "10"
+            },
+            {
+                "note": "Delays the script execution for 500 ticks",
+                "action": "1",
+                "param": "500"
+            },
+            {
+                "note": "Runs to node id 3",
+                "action": "3",
+                "param": "3"
+            },
+            {
+                "note": "Looks at node id 11",
+                "action": "5",
+                "param": "11"
+            },
+            {
+                "note": "Delays the script execution for 500 ticks",
+                "action": "1",
+                "param": "500"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2600",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2600",
+            "ai_type": "AITYPE_GUARD_AK",
+            "graph_area": "WatchTower"
+        },
+        "ai_id": "2200"
+    },
+    "2401": {
+        "commands": [
+            {
+                "note": "Walks to node id 2",
+                "action": "2",
+                "param": "2"
+            },
+            {
+                "note": "Looks at node id 5",
+                "action": "5",
+                "param": "5"
+            },
+            {
+                "note": "Delays the script execution for 300 ticks",
+                "action": "1",
+                "param": "300"
+            },
+            {
+                "note": "Walks to node id 3",
+                "action": "2",
+                "param": "3"
+            },
+            {
+                "note": "Looks at node id 6",
+                "action": "5",
+                "param": "6"
+            },
+            {
+                "note": "Delays the script execution for 300 ticks",
+                "action": "1",
+                "param": "300"
+            },
+            {
+                "note": "Walks to node id 4",
+                "action": "2",
+                "param": "4"
+            },
+            {
+                "note": "Looks at node id 8",
+                "action": "5",
+                "param": "8"
+            },
+            {
+                "note": "Delays the script execution for 300 ticks",
+                "action": "1",
+                "param": "300"
+            },
+            {
+                "note": "Walks to node id 1",
+                "action": "2",
+                "param": "1"
+            },
+            {
+                "note": "Looks at node id 7",
+                "action": "5",
+                "param": "7"
+            },
+            {
+                "note": "Delays the script execution for 300 ticks",
+                "action": "1",
+                "param": "300"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2401",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2401",
+            "ai_type": "AITYPE_GUARD_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2201"
+    },
+    "2403": {
+        "commands": [
+            {
+                "note": "Walks to node id 173",
+                "action": "2",
+                "param": "173"
+            },
+            {
+                "note": "Walks to node id 188",
+                "action": "2",
+                "param": "188"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2403",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2403",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2203"
+    },
+    "2404": {
+        "commands": [
+            {
+                "note": "Walks to node id 189",
+                "action": "2",
+                "param": "189"
+            },
+            {
+                "note": "Walks to node id 196",
+                "action": "2",
+                "param": "196"
+            },
+            {
+                "note": "Walks to node id 194",
+                "action": "2",
+                "param": "194"
+            },
+            {
+                "note": "Walks to node id 196",
+                "action": "2",
+                "param": "196"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2404",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2404",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2204"
+    },
+    "2418": {
+        "commands": [
+            {
+                "note": "Walks to node id 183",
+                "action": "2",
+                "param": "183"
+            },
+            {
+                "note": "Walks to node id 200",
+                "action": "2",
+                "param": "200"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2418",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2418",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2218"
+    },
+    "2419": {
+        "commands": [
+            {
+                "note": "Walks to node id 182",
+                "action": "2",
+                "param": "182"
+            },
+            {
+                "note": "Delays the script execution for 300 ticks",
+                "action": "1",
+                "param": "300"
+            },
+            {
+                "note": "Walks to node id 177",
+                "action": "2",
+                "param": "177"
+            },
+            {
+                "note": "Walks to node id 178",
+                "action": "2",
+                "param": "178"
+            },
+            {
+                "note": "Walks to node id 179",
+                "action": "2",
+                "param": "179"
+            },
+            {
+                "note": "Walks to node id 180",
+                "action": "2",
+                "param": "180"
+            },
+            {
+                "note": "Walks to node id 181",
+                "action": "2",
+                "param": "181"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2419",
+                "model_id": "003_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2419",
+            "ai_type": "AITYPE_GUARD_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2219"
+    },
+    "2425": {
+        "commands": [
+            {
+                "note": "Walks to node id 125",
+                "action": "2",
+                "param": "125"
+            },
+            {
+                "note": "Looks at node id 184",
+                "action": "5",
+                "param": "184"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2425",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2425",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2225"
+    },
+    "2405": {
+        "commands": [
+            {
+                "note": "Walks to node id 106",
+                "action": "2",
+                "param": "106"
+            },
+            {
+                "note": "Looks at node id 132",
+                "action": "5",
+                "param": "132"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2205"
+    },
+    "2605": {
+        "commands": [
+            {
+                "note": "Runs to node id 20",
+                "action": "3",
+                "param": "20"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 166",
+                "action": "5",
+                "param": "166"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2605",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2605",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2205"
+    },
+    "2406": {
+        "commands": [
+            {
+                "note": "Walks to node id 95",
+                "action": "2",
+                "param": "95"
+            },
+            {
+                "note": "Looks at node id 177",
+                "action": "5",
+                "param": "177"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2206"
+    },
+    "2606": {
+        "commands": [
+            {
+                "note": "Runs to node id 111",
+                "action": "3",
+                "param": "111"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 26",
+                "action": "5",
+                "param": "26"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2606",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2606",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2206"
+    },
+    "2407": {
+        "commands": [
+            {
+                "note": "Walks to node id 101",
+                "action": "2",
+                "param": "101"
+            },
+            {
+                "note": "Looks at node id 132",
+                "action": "5",
+                "param": "132"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2207"
+    },
+    "2607": {
+        "commands": [
+            {
+                "note": "Runs to node id 19",
+                "action": "3",
+                "param": "19"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 166",
+                "action": "5",
+                "param": "166"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2607",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2607",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2207"
+    },
+    "2408": {
+        "commands": [
+            {
+                "note": "Walks to node id 100",
+                "action": "2",
+                "param": "100"
+            },
+            {
+                "note": "Looks at node id 132",
+                "action": "5",
+                "param": "132"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2208"
+    },
+    "2608": {
+        "commands": [
+            {
+                "note": "Runs to node id 78",
+                "action": "3",
+                "param": "78"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 64",
+                "action": "5",
+                "param": "64"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2608",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2608",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2208"
+    },
+    "2409": {
+        "commands": [
+            {
+                "note": "Walks to node id 105",
+                "action": "2",
+                "param": "105"
+            },
+            {
+                "note": "Looks at node id 132",
+                "action": "5",
+                "param": "132"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2209"
+    },
+    "2609": {
+        "commands": [
+            {
+                "note": "Runs to node id 86",
+                "action": "3",
+                "param": "86"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 75",
+                "action": "5",
+                "param": "75"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2609",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2609",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2209"
+    },
+    "2410": {
+        "commands": [
+            {
+                "note": "Walks to node id 96",
+                "action": "2",
+                "param": "96"
+            },
+            {
+                "note": "Looks at node id 177",
+                "action": "5",
+                "param": "177"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2210"
+    },
+    "2610": {
+        "commands": [
+            {
+                "note": "Runs to node id 128",
+                "action": "3",
+                "param": "128"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 136",
+                "action": "5",
+                "param": "136"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2610",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2610",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2210"
+    },
+    "2411": {
+        "commands": [
+            {
+                "note": "Walks to node id 257",
+                "action": "2",
+                "param": "257"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2211"
+    },
+    "2611": {
+        "commands": [
+            {
+                "note": "Runs to node id 184",
+                "action": "3",
+                "param": "184"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 165",
+                "action": "5",
+                "param": "165"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2611",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2611",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2211"
+    },
+    "2412": {
+        "commands": [
+            {
+                "note": "Walks to node id 256",
+                "action": "2",
+                "param": "256"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2212"
+    },
+    "2612": {
+        "commands": [
+            {
+                "note": "Runs to node id 227",
+                "action": "3",
+                "param": "227"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 229",
+                "action": "5",
+                "param": "229"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2612",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2612",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2212"
+    },
+    "2413": {
+        "commands": [
+            {
+                "note": "Walks to node id 258",
+                "action": "2",
+                "param": "258"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2213"
+    },
+    "2613": {
+        "commands": [
+            {
+                "note": "Runs to node id 195",
+                "action": "3",
+                "param": "195"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 187",
+                "action": "5",
+                "param": "187"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2613",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2613",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2213"
+    },
+    "2414": {
+        "commands": [
+            {
+                "note": "Walks to node id 263",
+                "action": "2",
+                "param": "263"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2214"
+    },
+    "2614": {
+        "commands": [
+            {
+                "note": "Runs to node id 241",
+                "action": "3",
+                "param": "241"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 198",
+                "action": "5",
+                "param": "198"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2614",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2614",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2214"
+    },
+    "2415": {
+        "commands": [
+            {
+                "note": "Walks to node id 264",
+                "action": "2",
+                "param": "264"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2215"
+    },
+    "2615": {
+        "commands": [
+            {
+                "note": "Runs to node id 235",
+                "action": "3",
+                "param": "235"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 228",
+                "action": "5",
+                "param": "228"
+            }
+        ],
+        "soldiers": [
+            {
+                "soldier_id": "2615",
+                "model_id": "019_01_1"
+            }
+        ],
+        "ai": {
+            "ai_id": "2615",
+            "ai_type": "AITYPE_PATROL_AK",
+            "graph_area": "Entire Base Ground Level"
+        },
+        "ai_id": "2215"
+    },
+    "2416": {
+        "commands": [
+            {
+                "note": "Walks to node id 265",
+                "action": "2",
+                "param": "265"
+            },
+            {
+                "note": "Looks at node id 235",
+                "action": "5",
+                "param": "235"
+            },
+            {
+                "note": "Quit script",
+                "action": "stops script. Takes no parameters\"",
+                "param": "7"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2216"
+    },
+    "2616": {
+        "commands": [
+            {
+                "note": "Runs to node id 230",
+                "action": "3",
+                "param": "230"
+            },
+            {
+                "note": "End script",
+                "action": "only runs commands after this one. Takes no paramet\"",
+                "param": "6"
+            },
+            {
+                "note": "Looks at node id 33",
+                "action": "5",
+                "param": "33"
+            }
+        ],
+        "soldiers": [],
+        "ai": {},
+        "ai_id": "2216"
+    }
+}
