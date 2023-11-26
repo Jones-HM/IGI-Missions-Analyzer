@@ -1,7 +1,14 @@
+"""
+Brief: This script analyzes the missions files and generates a report of the AI activity.
+Game : Project IGI
+Author: HeavenHM
+Date: 2023-11-26
+"""
 import json
 import logging
 import os
 import re
+
 
 # Setup logger
 def setup_logger(log_file):
@@ -22,20 +29,18 @@ def read_json_file(file_path):
     try:
         with open(file_path, 'r') as file:
             return json.load(file)
-    except Exception as e:
-        logger.error(f"Error reading JSON file {file_path}: {e}")
+    except Exception as exception:
+        logger.error(f"Error reading JSON file {file_path}: {exception}")
         raise
 
 def read_objects_file(file_path):
     try:
         with open(file_path, 'r') as file:
             return file.readlines()
-    except Exception as e:
-        logger.error(f"Error reading objects file {file_path}: {e}")
+        
+    except Exception as exception:
+        logger.error(f"Error reading objects file {file_path}: {exception}")
         raise
-
-# Data Analysis Module
-import re
 
 def strip_quotes_and_whitespace(text):
     """Utility function to strip quotes and whitespace from a string."""
@@ -65,11 +70,16 @@ def process_human_soldier(task_id, line, model_id_regex, patrol_paths):
 
 def process_human_ai(task_id, line_parts, patrol_paths,graph_area_path):
     """Process human AI task."""
+    logger.error(f"Processing human AI task with arguements {task_id} and {line_parts} and {patrol_paths} and {graph_area_path}")
     ai_type = line_parts[3].strip('" ')
     graph_id = int(line_parts[4].split(')')[0].strip())
+    if graph_id <= 0:
+        logger.warning(f"AI with task ID {task_id} has graph ID 0. Skipping...")
+        return
+    
     graph_area = get_area_by_graph_id(graph_id, graph_area_path)
     if task_id in patrol_paths:
-        patrol_paths[task_id]['ai'] = {'ai_id': task_id, 'ai_type': ai_type, 'graph_area': graph_area}
+        patrol_paths[task_id]['ai'] = {'ai_id': task_id, 'ai_type': ai_type,'graph_id':graph_id, 'graph_area': graph_area}
         logger.info(f"Found new AI: {ai_type} Graph ID '{graph_id}'")
 
 def link_ai_to_patrol_paths(patrol_paths, ai_path):
@@ -112,7 +122,6 @@ def generate_json_and_report(patrol_paths, graph_area_path, ai_path, level):
         json_file.write(json_data)
 
     report = create_report_from_data(patrol_paths)
-    logger.info(f'Report Generated: {report[:100]}...')
     return report
 
 def extract_patrol_path_data(lines,graph_area_path):
@@ -144,8 +153,6 @@ def extract_patrol_path_data(lines,graph_area_path):
             logger.error(f"Error processing line: {line}. Error: {exception}")
 
     return patrol_paths
-
-import json
 
 def get_area_by_graph_id(graph_id, file_path):
     with open(file_path, 'r') as file:
@@ -191,14 +198,21 @@ def create_report_from_data(patrol_paths):
     for path_id, path_data in patrol_paths.items():
         if 'ai_id' in path_data:
             ai_type = path_data['ai'].get('ai_type', 'Not Specified')
-            ai_type = ai_type.replace('AITYPE_', '')
+            if ai_type != 'Not Specified':
+                ai_type = ai_type.replace('AITYPE_', '')
+                
+            graph_id = path_data['ai'].get('graph_id', 'Not Specified')
             graph_area = path_data['ai'].get('graph_area', 'Not Specified')
             commands = path_data['commands']
-
-            notes = "\n".join(f"{command['note']}" for command in commands) if commands else "No Commands"
             
-            report += f"{ai_type} ({path_data['ai_id']}) on Patrol ({path_id}) with Graph ({graph_area})\n"
-            #print(summarize_soldier_activity(notes))
+            ai_not_found = ai_type == graph_id == graph_area == 'Not Specified'
+            if ai_not_found:
+                logger.warning(f"AI not found for patrol path {path_id}. Skipping...")
+                continue
+            
+            notes = "\n".join(command['note'] for command in commands) if commands else "No Commands"
+            
+            report += f"{ai_type} ({path_data['ai_id']}) on Patrol ({path_id}) with Graph ({graph_id}) ({graph_area})\n"
             report += summarize_soldier_activity(notes) + "\n\n"
 
     return report + "\n\n"
@@ -228,7 +242,18 @@ def main():
         patrol_paths = extract_patrol_path_data(objects_lines,graph_area_path)
         link_ai_to_patrol_paths(patrol_paths, ai_path)
         report = generate_json_and_report(patrol_paths, graph_area_path, ai_path, level)
-        print(report)
+        # move the report to the reports folder
+        
+        report_file_name = f"level{level}_ai_mission_report.json"
+        with open(report_file_name, 'w') as report_file:
+            report_file.write(report)
+            # check if file report exists
+            if os.path.exists(report_file_name):
+                # move the file to reports folder
+                os.replace(report_file_name, f"reports/{report_file_name}")
+                logger.info(f"Report file {report_file_name} moved to reports folder")
+            else:
+                logger.error(f"Report file {report_file_name} not found")
 
     except Exception as exception:
         # print the stack trace
