@@ -8,7 +8,8 @@ import json
 import logging
 import os
 import re
-
+import pandas as pd
+import streamlit as st
 
 # Setup logger
 def setup_logger(log_file):
@@ -70,7 +71,6 @@ def process_human_soldier(task_id, line, model_id_regex, patrol_paths):
 
 def process_human_ai(task_id, line_parts, patrol_paths,graph_area_path):
     """Process human AI task."""
-    logger.error(f"Processing human AI task with arguements {task_id} and {line_parts} and {patrol_paths} and {graph_area_path}")
     ai_type = line_parts[3].strip('" ')
     graph_id = int(line_parts[4].split(')')[0].strip())
     if graph_id <= 0:
@@ -122,7 +122,7 @@ def generate_json_and_report(patrol_paths, graph_area_path, ai_path, level):
         json_file.write(json_data)
 
     report = create_report_from_data(patrol_paths)
-    return report
+    return report,json_data
 
 def extract_patrol_path_data(lines,graph_area_path):
     patrol_paths = {}
@@ -217,50 +217,65 @@ def create_report_from_data(patrol_paths):
 
     return report + "\n\n"
 
-
-# Main function to orchestrate the script
-def main():
+def streamlit_app():
     try:
-        # Read the level number from the user
-        print("Project IGI- Missions Analyzer")
-        level = int(input("Enter the level: "))
+        st.title("Project IGI- Missions Analyzer")
+        level = st.number_input("Enter the level:", min_value=1, max_value=14, step=1)
+        save_report = st.checkbox("Save the report to a file?")
         
-        if level < 1 or level > 14:
-            raise ValueError("Level number must be between 1 and 14")
-        
-        curr_path = os.path.dirname(os.path.realpath(__file__))
-        missions_path = os.path.join(curr_path, f"missions/location0/level{level}/objects.qsc")
-        ai_path = os.path.join(curr_path, f"missions/location0/level{level}/ai/")
-        graph_area_path = os.path.join(curr_path, f"GraphAreas/graph_area_level{level}.json")
+        if st.button("Analyze"):
+            curr_path = os.path.dirname(os.path.realpath(__file__))
+            missions_path = os.path.join(curr_path, f"missions/location0/level{level}/objects.qsc")
+            ai_path = os.path.join(curr_path, f"missions/location0/level{level}/ai/")
+            graph_area_path = os.path.join(curr_path, f"GraphAreas/graph_area_level{level}.json")
 
-        # Read and process files
-        logger.info(f"Reading missions file from {missions_path}")
-        logger.info(f"Reading AI files from {ai_path}")
-        logger.info(f"Reading graph area file from {graph_area_path}")
+            logger.info(f"Reading missions file from {missions_path}")
+            logger.info(f"Reading AI files from {ai_path}")
+            logger.info(f"Reading graph area file from {graph_area_path}")
 
-        objects_lines = read_objects_file(missions_path)
-        patrol_paths = extract_patrol_path_data(objects_lines,graph_area_path)
-        link_ai_to_patrol_paths(patrol_paths, ai_path)
-        report = generate_json_and_report(patrol_paths, graph_area_path, ai_path, level)
-        # move the report to the reports folder
-        
-        report_file_name = f"level{level}_ai_mission_report.json"
-        with open(report_file_name, 'w') as report_file:
-            report_file.write(report)
-            # check if file report exists
-            if os.path.exists(report_file_name):
-                # move the file to reports folder
-                os.replace(report_file_name, f"reports/{report_file_name}")
-                logger.info(f"Report file {report_file_name} moved to reports folder")
+            objects_lines = read_objects_file(missions_path)
+            patrol_paths = extract_patrol_path_data(objects_lines,graph_area_path)
+            link_ai_to_patrol_paths(patrol_paths, ai_path)
+            report,data = generate_json_and_report(patrol_paths, graph_area_path, ai_path, level)
+            
+            # Convert report to DataFrame and display as table
+            if save_report:
+                st.write("Report saved to file.")
+                json_data = json.loads(data)
+
+                # Flatten nested dictionaries
+                flattened_data = []
+                for outer_key, outer_value in json_data.items():
+                    temp = outer_value
+                    temp['ai_id_outer'] = outer_key
+                    flattened_data.append(temp)
+
+                # Convert to DataFrame
+                df = pd.DataFrame(flattened_data)
+
+                # Display DataFrame
+                st.table(df)
             else:
-                logger.error(f"Report file {report_file_name} not found")
+                st.write("Report saved to file.")
+                st.code(report, language='json')
+            
+            if save_report:
+                try:
+                    report_file_name = f"level{level}_ai_mission_report.json"
+                    with open("reports/" + report_file_name, 'w') as report_file:
+                        report_file.write(report)
+                        
+                except Exception as exception:
+                    import traceback
+                    logger.error(traceback.format_exc())
+                    logger.error(f"An error occurred while generating the report: {exception}")
+                    raise
 
     except Exception as exception:
-        # print the stack trace
         import traceback
         logger.error(traceback.format_exc())
         logger.error(f"An error occurred: {exception}")
         raise
 
 if __name__ == "__main__":
-    main()
+    streamlit_app()
